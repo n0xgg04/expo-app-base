@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "liqi-news",
+    "slug": "liqi-news",
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "scheme": "liqinews",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e0fff6c0-cfc7-4a69-9b26-c07b1b6bf5c1"
+      }
+    },
+    "owner": "n0xgg04",
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Manrope-Regular.ttf",
+            "./assets/fonts/Manrope-Bold.ttf",
+            "./assets/fonts/Manrope-SemiBold.ttf"
+          ]
+        }
+      ],
+      "expo-localization"
+    ],
+    "locales": {
+      "vi": "./localization/infos/vietnamese.json",
+      "en-US": "./localization/infos/english.json"
+    }
+  }
+}
