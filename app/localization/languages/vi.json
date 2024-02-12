@@ -1,3 +1,5 @@
 {
-  "login_screen_greeting": "Chào mừng bạn !"
+  "login_screen_greeting": "Chào mừng bạn !",
+  "feed_screen_app_bar_title": "Trang chủ",
+  "home_zone_bottom_nav_bar_feed": "Trang chủ"
 }

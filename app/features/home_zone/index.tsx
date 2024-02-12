@@ -71,41 +71,6 @@ export default function HomeZone() {
 						...tabElementStyle,
 					}}
 				/>
-				<Tab.Screen
-					name='Settings'
-					component={HomeScreen}
-					options={{
-						tabBarIcon: ({ size, focused, color }) => {
-							return (
-								<MaterialIcons
-									name='history-edu'
-									size={hp(2.5)}
-									color={color}
-								/>
-							);
-						},
-						title: i18n.t("home_zone_bottom_nav_bar_story"),
-						...tabElementStyle,
-					}}
-				/>
-				<Tab.Screen
-					name={SCREEN_NAME.home_resource}
-					component={HomeScreen}
-					options={{
-						title: i18n.t("home_zone_bottom_nav_bar_resources"),
-						tabBarIcon: ({ size, focused, color }) => {
-							return (
-								<Entypo
-									name='folder-images'
-									size={hp(2.6)}
-									color={color}
-								/>
-							);
-						},
-						...tabElementStyle,
-					}}
-				/>
-				//! TODO: Add here
 			</Tab.Navigator>
 		</>
 	);
