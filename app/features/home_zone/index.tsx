@@ -12,6 +12,7 @@ import { FontSizeConstants } from "@/global/theme/font_size";
 import { colors } from "@/global/theme/pallete";
 import { hp } from "@/global/utils/responsive";
 import i18n from "@/localization/i18n";
+import InfoScreen from "@/features/info_screen";
 
 const Tab = createBottomTabNavigator();
 
@@ -54,6 +55,9 @@ export default function HomeZone() {
 					ios: undefined,
 				})}
 			>
+				{/*
+				Khai báo screen của bottom navigation bar
+				*/}
 				<Tab.Screen
 					name={SCREEN_NAME.home_feed}
 					component={HomeScreen}
@@ -64,6 +68,23 @@ export default function HomeZone() {
 								<MaterialIcons
 									name='space-dashboard'
 									size={hp(2.5)}
+									color={color}
+								/>
+							);
+						},
+						...tabElementStyle,
+					}}
+				/>
+				<Tab.Screen
+					name={SCREEN_NAME.info}
+					component={InfoScreen}
+					options={{
+						title: i18n.t("home_zone_bottom_nav_bar_info"),
+						tabBarIcon: ({ size, focused, color }) => {
+							return (
+								<MaterialIcons
+									name='space-dashboard'
+									size={hp(2.5)} //!height percent
 									color={color}
 								/>
 							);

@@ -1,5 +1,7 @@
 {
   "login_screen_greeting": "Chào mừng bạn !",
   "feed_screen_app_bar_title": "Trang chủ",
-  "home_zone_bottom_nav_bar_feed": "Trang chủ"
+  "info_screen_app_bar_title": "Về chúng tôi",
+  "home_zone_bottom_nav_bar_feed": "Trang chủ",
+  "home_zone_bottom_nav_bar_info": "Thông tin"
 }
