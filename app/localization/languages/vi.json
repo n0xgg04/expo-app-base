@@ -4,5 +4,27 @@
   "info_screen_app_bar_title": "Về chúng tôi",
   "home_zone_bottom_nav_bar_feed": "Trang chủ",
   "home_zone_bottom_nav_bar_info": "Thông tin",
-  "get_started_screen_title_1": "Thời tiết cực đoan."
+  "get_started_screen_title_1": "Thời tiết cực đoan.",
+  "intro_screen": {
+    "step1": {
+      "title": ["Thời tiết cực đoan.", "Địa điểm an toàn.", "Ultra-Wide Band."],
+      "content": "Một ứng dụng tuyệt vời để phát hiện nguy cơ thiên tai tìm tàng xung quanh bạn.\n\nNhận thông báo ngay khi mối đe doạ sắp đến. Mau chóng tìm đến nơi tập trung tại địa phương một cách chính xác và hơn thế nữa.",
+      "button": "Bắt đầu khám phá"
+    },
+    "step2": {
+      "title": ["Nhận", "Thông báo", "Ngay trước khi", "nguy hiểm sắp đến"],
+      "content": "Từ cơ sở dữ liệu địa phương, những thiên tai được cập nhật liên tục trên hệ thống mà không ảnh hưởng đến thời lượng pin điện thoại.\n\nĐiều này khiến Noticast mang đến những thông báo quan trọng trong những lúc cần thiết.",
+      "button": "Kéo để bỏ qua"
+    },
+    "step3": {
+      "title": [
+        "Quần áo ấm. Ủng.",
+        "Găng tay. Chống",
+        "chọi với mọi loại",
+        "điều kiện thời tiết."
+      ],
+      "content": "Ứng dụng còn cung cấp những thông tin đề xuất về quần áo, trang phục, phương tiện cho các loại điều kiện thời tiết khác nhau.",
+      "button": "Kéo để bỏ qua"
+    }
+  }
 }

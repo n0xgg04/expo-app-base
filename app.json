@@ -51,7 +51,8 @@
           ]
         }
       ],
-      "expo-localization"
+      "expo-localization",
+      "expo-router"
     ],
     "locales": {
       "vi": "./localization/infos/vietnamese.json",
