@@ -3,6 +3,7 @@ import HomeScreen from "@/features/home_screen";
 import HomeZone from "@/features/home_zone";
 import GetStarted from "@/features/get_started";
 
+//! TODO : Add new screen
 export const screens: ApplicationScreenElement[] = [
   {
     screen: GetStarted,

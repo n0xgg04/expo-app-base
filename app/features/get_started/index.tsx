@@ -5,6 +5,8 @@ import { LayoutChangeEvent, SafeAreaView, StyleSheet } from "react-native";
 import Stack from "@/global/components/utils/stack";
 import Typography from "@/global/components/utils/typography";
 import { hp, wp } from "@/global/utils/responsive";
+import { useNavigation } from "@react-navigation/native";
+import { CommonActions } from "@react-navigation/native";
 import Animated, {
   Easing,
   ReduceMotion,
@@ -18,11 +20,14 @@ import {
   GestureDetector,
   PanGestureHandler,
 } from "react-native-gesture-handler";
-import Slide1 from "@/features/get_started/parts/slide1"; // Import PanGestureHandler
+import Slide1 from "@/features/get_started/parts/slide1";
+import { SCREEN_NAME } from "@/global/constants/screens";
+import i18n from "@/localization/i18n"; // Import PanGestureHandler
 type Props = {};
 
 export default function GetStarted(props: Props) {
   const translateX = useSharedValue(0);
+  const navigation = useNavigation();
   const handlePress = () => {
     translateX.value = withTiming(translateX.value - wp(100), {
       duration: 400,
@@ -41,6 +46,15 @@ export default function GetStarted(props: Props) {
     } = e;
     setWidth(width);
   }, []);
+
+  const handleGoToHomeScreen = () => {
+    navigation.dispatch(
+      CommonActions.navigate({
+        //! TODO :
+        name: SCREEN_NAME.home,
+      }),
+    );
+  };
 
   return (
     <Animated.View
@@ -68,7 +82,7 @@ export default function GetStarted(props: Props) {
               <Stack direction="column" gap={hp(3)}>
                 <Stack direction="column">
                   <Typography type="h1" style={styles.title}>
-                    Thời tiết cực đoan.
+                    {i18n.t("get_started_screen_title_1")}
                   </Typography>
                   <Typography type="h1" style={styles.title}>
                     Địa điểm an toàn.
@@ -88,7 +102,11 @@ Nhận thông báo ngay khi mối đe doạ sắp đến. Mau chóng tìm đến
                   onLayout={onLayoutHandle}
                 >
                   <Circle width={width} />
-                  <Typography type={"h1"} style={styles.btnTitle}>
+                  <Typography
+                    onPress={handleGoToHomeScreen}
+                    type={"h1"}
+                    style={styles.btnTitle}
+                  >
                     Bắt đầu khám phá
                   </Typography>
                 </Stack>
