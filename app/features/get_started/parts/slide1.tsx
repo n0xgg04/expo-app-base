@@ -10,6 +10,7 @@ import Stack from "@/global/components/utils/stack";
 import { hp, wp } from "@/global/utils/responsive";
 import Typography from "@/global/components/utils/typography";
 import { ImageBackground } from "expo-image";
+import i18n from "@/localization/i18n";
 
 type Props = {
   onPress: ((event: GestureResponderEvent) => void) | undefined;
@@ -18,7 +19,7 @@ export default function Slide1({ onPress }: Props) {
   return (
     <ImageBackground
       style={styles.imageBg}
-      source={ImagesConstants.icons.intro1}
+      source={ImagesConstants.backgrounds.intro.slide1}
     >
       <SafeAreaView>
         <Stack
@@ -30,23 +31,21 @@ export default function Slide1({ onPress }: Props) {
           <Stack direction="column" gap={hp(3)}>
             <Stack direction="column">
               <Typography type="h1" style={styles.title}>
-                Thời tiết cực đoan.
+                {i18n.t("intro_screen.step1.title.0")}
               </Typography>
               <Typography type="h1" style={styles.title}>
-                Địa điểm an toàn.
+                {i18n.t("intro_screen.step1.title.1")}
               </Typography>
               <Typography type="h1" style={styles.title}>
-                Ultra-Wide Band.
+                {i18n.t("intro_screen.step1.title.2")}
               </Typography>
             </Stack>
             <Typography type="h1" style={styles.sub}>
-              {`Một ứng dụng tuyệt vời để phát hiện nguy cơ thiên tai tìm tàng xung quanh bạn.
-
-Nhận thông báo ngay khi mối đe doạ sắp đến. Mau chóng tìm đến nơi tập trung tại địa phương một cách chính xác và hơn thế nữa.`}
+              {i18n.t("intro_screen.step1.content")}
             </Typography>
             <TouchableOpacity onPress={onPress} style={styles.btnContainer}>
               <Typography type={"h1"} style={styles.btnTitle}>
-                Bắt đầu khám phá
+                {i18n.t("intro_screen.step1.button")}
               </Typography>
             </TouchableOpacity>
           </Stack>
@@ -83,7 +82,7 @@ const styles = StyleSheet.create({
   },
   flx: {
     height: "100%",
-    paddingBottom: hp(5),
+    paddingBottom: hp(7),
   },
   title: {
     paddingHorizontal: wp(10),
