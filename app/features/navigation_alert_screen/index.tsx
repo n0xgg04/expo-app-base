@@ -32,35 +32,59 @@ export default function NavigationAlertScreen() {
     const [description] = useState(i18n.t("feature.NavigationAlertScreen.description"));
 
     return (
-        <ImageBackground style={styles.imageBackground} source={ImagesConstants.backgrounds.features.navigation_alert_bg}>
-            <Stack direction="column" style={styles.container} justifyContent="flex-end" alignItems="center">
-                <Image source={ImagesConstants.icons.wave} style={styles.imageIcon}></Image>
-                <Image source={ImagesConstants.icons.navigation} style={[styles.imageIcon, styles.marginTop]}></Image>
-                <Typography type={"h1"} style={styles.title}>
-                    {i18n.t("feature.NavigationAlertScreen.distance")}
-                </Typography>
-                <Typography type={"h1"} style={styles.title}>
-                    {i18n.t("feature.NavigationAlertScreen.ahead")}
-                </Typography>
-                <Typography type={"h1"} style={styles.subtitle}>
-                    {i18n.t("feature.NavigationAlertScreen.to")}
-                </Typography>
-                <Typography type={"h1"} style={styles.title}>
-                    {i18n.t("feature.NavigationAlertScreen.findGatheringPoint")}
-                </Typography>
-                <Typography type={"h1"} style={styles.title}>
-                    {i18n.t("feature.NavigationAlertScreen.emergency")}
-                </Typography>
-                <Description text={description} style={undefined} />
-                <Typography type={"h2"} style={styles.mainTitle}>
-                    {i18n.t("feature.NavigationAlertScreen.understandNavigation")}
-                </Typography>
-                <View style={styles.flexContainer}>
-                    <Button title={i18n.t("feature.NavigationAlertScreen.button.viewDescription")} onPress={() => { } } style={undefined} />
-                    <Button title={i18n.t("feature.NavigationAlertScreen.button.start")} onPress={() => { }} style={styles.startButton} />
-                </View>
-            </Stack>
-        </ImageBackground>
+      <ImageBackground
+        style={styles.imageBackground}
+        source={ImagesConstants.backgrounds.features.navigation_alert_bg}
+      >
+        <Stack
+          direction="column"
+          style={styles.container}
+          justifyContent="flex-end"
+          alignItems="center"
+        >
+          <Image
+            source={ImagesConstants.icons.wave}
+            style={styles.imageIcon}
+          ></Image>
+          <Image
+            source={ImagesConstants.icons.navigation}
+            style={[styles.imageIcon, styles.marginTop]}
+          ></Image>
+          <Typography type={"h1"} style={styles.title}>
+            {i18n.t("feature.NavigationAlertScreen.distance")}
+          </Typography>
+          <Typography type={"h1"} style={styles.title}>
+            {i18n.t("feature.NavigationAlertScreen.ahead")}
+          </Typography>
+          <Typography type={"h1"} style={styles.subtitle}>
+            {i18n.t("feature.NavigationAlertScreen.almost_there")}
+          </Typography>
+          <Typography type={"h1"} style={styles.title}>
+            {i18n.t("feature.NavigationAlertScreen.findGatheringPoint")}
+          </Typography>
+          <Typography type={"h1"} style={styles.title}>
+            {i18n.t("feature.NavigationAlertScreen.emergency")}
+          </Typography>
+          <Description text={description} style={undefined} />
+          <Typography type={"h2"} style={styles.mainTitle}>
+            {i18n.t("feature.NavigationAlertScreen.understandNavigation")}
+          </Typography>
+          <View style={styles.flexContainer}>
+            <Button
+              title={i18n.t(
+                "feature.NavigationAlertScreen.button.viewDescription"
+              )}
+              onPress={() => {}}
+              style={undefined}
+            />
+            <Button
+              title={i18n.t("feature.NavigationAlertScreen.button.start")}
+              onPress={() => {}}
+              style={styles.startButton}
+            />
+          </View>
+        </Stack>
+      </ImageBackground>
     );
 }
 

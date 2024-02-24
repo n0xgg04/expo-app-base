@@ -11,6 +11,7 @@ import Animated, {
 import Slide1 from "@/features/get_started/parts/slide1";
 import Slide2 from "./parts/slide2";
 import Slide3 from "./parts/slide3";
+import Slide4 from "./parts/slide4";
 type Props = {};
 
 export default function GetStarted(props: Props) {
@@ -38,7 +39,7 @@ export default function GetStarted(props: Props) {
         <Slide1 onPress={handlePress} />
         <Slide2 onPress={handlePress} />
         <Slide3 onPress={handlePress} />
-        
+        <Slide4 onPress={handlePress} />
       </Stack>
     </Animated.View>
   );

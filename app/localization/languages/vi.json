@@ -25,6 +25,20 @@
       ],
       "content": "Ứng dụng còn cung cấp những thông tin đề xuất về quần áo, trang phục, phương tiện cho các loại điều kiện thời tiết khác nhau.",
       "button": "Kéo để bỏ qua"
+    },
+    "step4": {
+      "title": [
+        "500m",
+        "phía trước",
+        "là tới.",
+        "Ultra-Wide Band",
+        "được tận dụng triệt để"
+      ],
+      "content": "Trên các thiết bị có hỗ trợ chip Băng thông siêu rộng, việc định vị để di chuyển đến nơi an toàn dễ dàng hơn bao giờ hết.\n\nXem mô tả để hiểu rõ hơn cách điều hướng.",
+      "buttons": {
+        "description": "Xem mô tả",
+        "done": "Xong"
+      } 
     }
   },
   "feature": {
@@ -32,7 +46,7 @@
       "description": "Hỗ trợ bạn di chuyển chính xác đến điểm tập kết gần nhất để nhanh chóng sơ tán trước những nguy cơ thiên tai cực đoan.",
       "distance": "500m",
       "ahead": "phía trước",
-      "to": "là tới.",
+      "almost_there": "là tới.",
       "findGatheringPoint": "Tìm Điểm Tập Kết",
       "emergency": "Khẩn cấp",
       "viewDescription": "Xem mô tả",
