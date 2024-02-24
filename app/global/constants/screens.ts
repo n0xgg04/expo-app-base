@@ -4,5 +4,6 @@ export const SCREEN_NAME = {
   info: "info",
   get_started: "get_started",
   NavigationAlertScreen: "navigation_alert_screen",
+  NavigationSafetyScreen: "navigation_safety_screen",
   //TODO : Add here
 };

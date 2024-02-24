@@ -56,6 +56,16 @@
           "viewDescription": "Xem mô tả",
           "start": "Bắt đầu"
       }
+    },
+    "NavigationSafetyScreen":{
+     "findingTo": "ĐANG TÌM ĐẾN",
+     "meetingPoint": "ĐIỂM TẬP KẾT",
+     "policeStation": "CÔNG AN",
+     "city": "TT. THANH BÌNH",
+     "distance": "mét",
+     "beside": "ở bên",
+     "left": "trái",
+     "start": "Bắt đầu"
     }
   }
 }

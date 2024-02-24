@@ -6,6 +6,9 @@ export const ImagesConstants = {
     wave: require("@/../assets/images/icons/wave.png"),
     navigation: require("@/../assets/images/icons/navigation.png"),
     navigation_wave_ahead: require("@/../assets/images/icons/direction_ahead_with_wave.png"),
+    arrow: require("@/../assets/images/icons/arrow.png"),
+    direction: require("@/../assets/images/icons/direction.png"),
+    while_circle: require("@/../assets/images/icons/white-circle.png"),
   },
   backgrounds: {
     intro: {
