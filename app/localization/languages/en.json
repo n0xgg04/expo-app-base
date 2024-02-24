@@ -1,4 +1,47 @@
 {
-  "login_screen_greeting": "Welcome!",
-  "get_started_screen_title_1": "....."
+  "login_screen_greeting": "Welcome !",
+  "feed_screen_app_bar_title": "Home",
+  "info_screen_app_bar_title": "About us",
+  "home_zone_bottom_nav_bar_feed": "Home",
+  "home_zone_bottom_nav_bar_info": "Information",
+  "get_started_screen_title_1": "Extreme weather.",
+  "intro_screen": {
+    "step1": {
+      "title": ["Extreme weather.", "Safe location.", "Ultra-Wide Band."],
+      "content": "An excellent app to detect and find nearby natural disaster risks.\n\nReceive notifications instantly when threats are imminent. Quickly locate the local assembly point accurately and more.",
+      "button": "Start exploring"
+    },
+    "step2": {
+      "title": ["Receive", "Notifications", "Before danger", "approaches"],
+      "content": "From the local database, disasters are continuously updated on the system without affecting phone battery life.\n\nThis enables Noticast to deliver crucial notifications when needed.",
+      "button": "Swipe to skip"
+    },
+    "step3": {
+      "title": [
+        "Warm clothes.",
+        "Boots. Gloves.",
+        "Deal with all type of",
+        "weather conditions."
+      ],
+      "content": "The app also provides recommendations for clothing, attire, and transportation for various weather conditions.",
+      "button": "Swipe to skip"
+    }
+  },
+  "feature": {
+    "NavigationAlertScreen":{
+      "description": "Assist you in moving precisely to the nearest assembly point for a quick evacuation in the face of extreme natural disaster risks.",
+      "distance": "500 meters",
+      "ahead": "ahead",
+      "to": "to",
+      "findGatheringPoint": "Find Assembly Point",
+      "emergency": "Emergency",
+      "viewDescription": "View description",
+      "start": "Start",
+      "understandNavigation": "Refer to the description for a better understanding of navigation.",
+      "button": {
+        "viewDescription": "View description",
+        "start": "Start"
+      }
+    }
+  }
 }
