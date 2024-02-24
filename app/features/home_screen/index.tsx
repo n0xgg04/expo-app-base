@@ -1,6 +1,6 @@
 import { AntDesign } from "@expo/vector-icons";
 import * as React from "react";
-import { StyleSheet } from "react-native";
+import { SafeAreaView, StyleSheet } from "react-native";
 
 import AppBar from "@/global/components/ui/appbar";
 import Button from "@/global/components/ui/button";
@@ -13,29 +13,9 @@ import i18n from "@/localization/i18n";
 
 export default function HomeScreen() {
   return (
-    <ScreenBase
-      AppBar={
-        <AppBar
-          title={i18n.t("feed_screen_app_bar_title")}
-          rightTool={
-            <Button
-              backgroundColor={colors.backgroundColor.donateBtn}
-              textStyle={styles.donateBtnText}
-              style={styles.donateBtn}
-              leftIcon={
-                <AntDesign
-                  name="staro"
-                  size={wp(4)}
-                  color={colors.textColor.primaryColor}
-                />
-              }
-            >
-              Donate us
-            </Button>
-          }
-        />
-      }
-    ></ScreenBase>
+    <SafeAreaView>
+      
+    </SafeAreaView>
   );
 }
 

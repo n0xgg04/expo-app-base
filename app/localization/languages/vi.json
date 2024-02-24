@@ -67,5 +67,17 @@
      "left": "trái",
      "start": "Bắt đầu"
     }
+  },
+  "home_screen": {
+    "info_screen": {
+      "location": {
+        "my_location": "Vị trí của tôi"
+      },
+      "weather": {
+        "uv_title": "CHỈ SỐ UV",
+        "humidity_title": "ĐỘ ẨM",
+        "rain_amount_title": "LƯỢNG MƯA"
+      }
+    }
   }
 }
