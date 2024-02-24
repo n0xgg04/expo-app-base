@@ -26,5 +26,22 @@
       "content": "Ứng dụng còn cung cấp những thông tin đề xuất về quần áo, trang phục, phương tiện cho các loại điều kiện thời tiết khác nhau.",
       "button": "Kéo để bỏ qua"
     }
+  },
+  "feature": {
+    "NavigationAlertScreen":{
+      "description": "Hỗ trợ bạn di chuyển chính xác đến điểm tập kết gần nhất để nhanh chóng sơ tán trước những nguy cơ thiên tai cực đoan.",
+      "distance": "500m",
+      "ahead": "phía trước",
+      "to": "là tới.",
+      "findGatheringPoint": "Tìm Điểm Tập Kết",
+      "emergency": "Khẩn cấp",
+      "viewDescription": "Xem mô tả",
+      "start": "Bắt đầu",
+      "understandNavigation": "Xem mô tả để hiểu rõ hơn cách điều hướng.",
+      "button": {
+          "viewDescription": "Xem mô tả",
+          "start": "Bắt đầu"
+      }
+    }
   }
 }
