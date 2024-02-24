@@ -5,6 +5,9 @@ export const ImagesConstants = {
     facebook: require("@/../assets/images/icons/facebook.png"),
     wave: require("@/../assets/images/icons/wave.png"),
     navigation: require("@/../assets/images/icons/navigation.png"),
+    arrow: require("@/../assets/images/icons/arrow.png"),
+    direction: require("@/../assets/images/icons/direction.png"),
+    while_circle: require("@/../assets/images/icons/white-circle.png"),
   },
   backgrounds: {
     intro: {
