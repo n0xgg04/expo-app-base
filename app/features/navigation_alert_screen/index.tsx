@@ -1,162 +1,144 @@
-import React, { useState } from "react";
-import { StyleSheet, Image, TouchableOpacity, View } from "react-native";
-import { ImageBackground } from "expo-image";
+import * as React from "react";
 import { ImagesConstants } from "@/global/constants/resources/images";
-import { hp, wp } from "@/global/utils/responsive";
+import {
+  GestureResponderEvent,
+  Image,
+  LayoutChangeEvent,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+} from "react-native";
 import Stack from "@/global/components/utils/stack";
+import { hp, wp } from "@/global/utils/responsive";
 import Typography from "@/global/components/utils/typography";
-import i18n from "@/localization/i18n";
+import { ImageBackground } from "expo-image";
+import { SCREEN_NAME } from "@/global/constants/screens";
+import i18n from "@/localization/i18n"; // Import PanGestureHandler
+import { CommonActions, useNavigation } from "@react-navigation/native";
 
-const buttonHeight = hp(7);
-const buttonPadding = wp(10);
-const buttonFontSize = hp(2.5);
-
-function Button({ title, style, onPress }: { title: string, style: any, onPress: () => void }) {
-    return (
-        <TouchableOpacity style={[styles.buttonContainer, style]} onPress={onPress}>
-            <Typography type={"h1"} style={styles.buttonTitle}>
-                {title}
-            </Typography>
-        </TouchableOpacity>
-    );
-}
-
-function Description({ text, style }: { text: string, style: any }) {
-    return (
-        <Typography type={"h2"} style={[styles.description, style]}>
-            {text}
-        </Typography>
-    );
-}
 export default function NavigationAlertScreen() {
-    const [description] = useState(i18n.t("feature.NavigationAlertScreen.description"));
+  const navigator = useNavigation();
+  const onPress = () => {
+    navigator.dispatch(CommonActions.navigate(SCREEN_NAME.map_navigation));
+  };
 
-    return (
-      <ImageBackground
-        style={styles.imageBackground}
-        source={ImagesConstants.backgrounds.features.navigation_alert_bg}
-      >
+  return (
+    <ImageBackground
+      style={styles.imageBg}
+      source={ImagesConstants.backgrounds.intro.slide4}
+    >
+      <SafeAreaView>
         <Stack
           direction="column"
-          style={styles.container}
+          style={styles.flx}
           justifyContent="flex-end"
           alignItems="center"
         >
           <Image
-            source={ImagesConstants.icons.wave}
-            style={styles.imageIcon}
-          ></Image>
-          <Image
-            source={ImagesConstants.icons.navigation}
-            style={[styles.imageIcon, styles.marginTop]}
-          ></Image>
-          <Typography type={"h1"} style={styles.title}>
-            {i18n.t("feature.NavigationAlertScreen.distance")}
-          </Typography>
-          <Typography type={"h1"} style={styles.title}>
-            {i18n.t("feature.NavigationAlertScreen.ahead")}
-          </Typography>
-          <Typography type={"h1"} style={styles.subtitle}>
-            {i18n.t("feature.NavigationAlertScreen.almost_there")}
-          </Typography>
-          <Typography type={"h1"} style={styles.title}>
-            {i18n.t("feature.NavigationAlertScreen.findGatheringPoint")}
-          </Typography>
-          <Typography type={"h1"} style={styles.title}>
-            {i18n.t("feature.NavigationAlertScreen.emergency")}
-          </Typography>
-          <Description text={description} style={undefined} />
-          <Typography type={"h2"} style={styles.mainTitle}>
-            {i18n.t("feature.NavigationAlertScreen.understandNavigation")}
-          </Typography>
-          <View style={styles.flexContainer}>
-            <Button
-              title={i18n.t(
-                "feature.NavigationAlertScreen.button.viewDescription"
-              )}
-              onPress={() => {}}
-              style={undefined}
-            />
-            <Button
-              title={i18n.t("feature.NavigationAlertScreen.button.start")}
-              onPress={() => {}}
-              style={styles.startButton}
-            />
-          </View>
+            source={ImagesConstants.icons.navigation_wave_ahead}
+            resizeMode="contain"
+            style={{ height: wp(50) }}
+          />
+          <Stack direction="column" gap={hp(3)}>
+            <Stack direction="column" alignItems="center">
+              <Typography type="h1" style={styles.title}>
+                {i18n.t("navigation_get_ready.title.0")}
+              </Typography>
+              <Typography type="h1" style={[styles.title]}>
+                {i18n.t("navigation_get_ready.title.1")}
+              </Typography>
+              <Typography type="h1" style={styles.titlesub}>
+                {i18n.t("navigation_get_ready.title.2")}
+              </Typography>
+              <Typography type="h1" style={[styles.title, styles.marginTitle]}>
+                {i18n.t("navigation_get_ready.title.3")}
+              </Typography>
+              <Typography type="h1" style={styles.titlesub}>
+                {i18n.t("navigation_get_ready.title.4")}
+              </Typography>
+            </Stack>
+            <Typography type="h1" style={styles.sub}>
+              {i18n.t("navigation_get_ready.content")}
+            </Typography>
+
+            <Stack direction="row" gap={wp(2)} justifyContent="center">
+              <TouchableOpacity onPress={onPress} style={styles.btnContainer}>
+                <Typography type={"h1"} style={styles.btnTitle}>
+                  {i18n.t("navigation_get_ready.buttons.description")}
+                </Typography>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={onPress} style={styles.btnContainer}>
+                <Typography type={"h1"} style={styles.btnTitle}>
+                  {i18n.t("navigation_get_ready.buttons.done")}
+                </Typography>
+              </TouchableOpacity>
+            </Stack>
+          </Stack>
         </Stack>
-      </ImageBackground>
-    );
+      </SafeAreaView>
+    </ImageBackground>
+  );
 }
 
 const styles = StyleSheet.create({
-    flexContainer: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-evenly",
-        alignItems: "center",
-        marginTop: hp(3),
-    },
-    buttonContainer: {
-        backgroundColor: "#1A1A1A",
-        height: buttonHeight,
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        marginHorizontal: wp(2),
-        borderRadius: wp(10),
-        borderColor: "rgba(255,255,255,0.33)",
-        borderWidth: wp(0.5),
-        borderStyle: "solid",
-    },
-    buttonTitle: {
-        color: "white",
-        paddingHorizontal: buttonPadding,
-        fontSize: buttonFontSize,
-        width: undefined,
-    },
-    startButton: {
-        paddingHorizontal: wp(3),
-        backgroundColor: "#2E2E2E",
-    },
-    container: {
-        height: "100%",
-        paddingBottom: hp(5),
-    },
-    title: {
-        fontSize: hp(4),
-        color: "white",
-    },
-    subtitle: {
-        fontSize: hp(3),
-        color: "white",
-        marginBottom: hp(3),
-    },
-    description: {
-        fontWeight: "800",
-        fontSize: hp(2.5),
-        color: "white",
-        marginTop: hp(2.5),
-        paddingHorizontal: wp(6),
-        textAlign: "left",
-    },
-    mainTitle: {
-        fontWeight: "900",
-        fontSize: hp(2.5),
-        color: "white",
-        marginTop: hp(2),
-        paddingEnd: wp(9),
-        textAlign: "left",
-    },
-    imageBackground: {
-        width: wp(100),
-        height: hp(100),
-    },
-    imageIcon: {
-        width: wp(30),
-        height: hp(20),
-    },
-    marginTop: {
-        marginTop: hp(-8),
-    }
+  btnContainer: {
+    position: "relative",
+    backgroundColor: "#1A1A1A",
+    height: hp(7),
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginHorizontal: wp(1),
+    borderRadius: wp(10),
+    borderColor: "rgba(255,255,255,0.33)",
+    borderWidth: wp(0.2),
+    borderStyle: "solid",
+    marginEnd: 0,
+    width: wp(40),
+  },
+  rowButton: {
+    justifyContent: "center",
+  },
+  marginTitle: {
+    marginTop: hp(2),
+  },
+  buttonArrow: {
+    width: hp(3),
+    height: hp(3),
+  },
+  btnTitle: {
+    color: "white",
+    paddingHorizontal: wp(0),
+    fontSize: hp(2),
+    paddingStart: wp(0),
+  },
+  sub: {
+    color: "white",
+    paddingHorizontal: wp(10),
+    paddingBottom: wp(4),
+    fontSize: hp(1.6),
+  },
+  flx: {
+    height: "100%",
+    paddingBottom: hp(7),
+  },
+  title: {
+    paddingHorizontal: wp(10),
+    fontSize: hp(4.5),
+    color: "white",
+  },
+  titlesub: {
+    paddingHorizontal: wp(10),
+    fontSize: hp(3.5),
+    color: "white",
+  },
+  title_darkbule: {
+    color: "#20678E",
+  },
+  imageBg: {
+    width: wp(100),
+    height: hp(100),
+  },
 });

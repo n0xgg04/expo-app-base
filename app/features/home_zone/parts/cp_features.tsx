@@ -40,7 +40,7 @@ export default function FeatureBar(props: Props) {
   } 
 
   const handleFindPoint = () => {
-    navigator.dispatch(CommonActions.navigate(SCREEN_NAME.silde4));
+    navigator.dispatch(CommonActions.navigate(SCREEN_NAME.map_navigation));
   }
   
   return (

@@ -5,15 +5,14 @@ b## Expo App
 - NodeJS 20+
 - Typescript 4.x
 - Expo v50+
-- Não
 
 ### 2. Installation
-#### Cài đặt package:
+#### Install package:
 ```bash
 yarn install
 ```
 
-#### Chạy app
+#### Run app
 ```bash
 yarn run android
 yarn run ios
