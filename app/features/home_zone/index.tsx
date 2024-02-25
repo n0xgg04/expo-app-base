@@ -35,7 +35,7 @@ export default function HomeZone() {
           <InfoBoardInsight />
 
           <DetailsInfoBoard />
-          <FeatureBar isConnected={false} isNotificationOn={false} location={"TT. Thanh Bình"} />
+          <FeatureBar isConnected={true} isNotificationOn={false} location={"TT. Thanh Bình"} />
         </SafeAreaView>
       </ImageBackground>
     </ScrollView>

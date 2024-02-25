@@ -15,13 +15,14 @@ import Typography from "@/global/components/utils/typography";
 import { ImageBackground } from "expo-image";
 import { SCREEN_NAME } from "@/global/constants/screens";
 import i18n from "@/localization/i18n"; // Import PanGestureHandler
+import { CommonActions, useNavigation } from "@react-navigation/native";
 
-type Props = {
-  onPress: ((event: GestureResponderEvent) => void) | undefined;
-};
 
-export default function Slide4({ onPress }: Props) {
-
+export default function Slide4() {
+  const navigator = useNavigation();
+  const onPress = () => {
+    navigator.dispatch(CommonActions.navigate(SCREEN_NAME.home));
+  };
  
   return (
     <ImageBackground

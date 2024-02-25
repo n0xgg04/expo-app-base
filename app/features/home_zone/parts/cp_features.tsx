@@ -1,7 +1,10 @@
 import Stack from "@/global/components/utils/stack";
 import Typography from "@/global/components/utils/typography";
 import { ImagesConstants } from "@/global/constants/resources/images";
+import { SCREEN_NAME } from "@/global/constants/screens";
 import { hp, wp } from "@/global/utils/responsive";
+import { CommonActions, useNavigation } from "@react-navigation/native";
+import { useState } from "react";
 import {
   Image,
   ImageSourcePropType,
@@ -17,7 +20,29 @@ type Props = {
   isNotificationOn: boolean;
 };
 
+
 export default function FeatureBar(props: Props) {
+  const navigator = useNavigation();
+  const [totalKm, setTotalKm] = useState(15);
+
+  const handleIncreaseKm = () => {
+    if (totalKm >= 99) {
+      return;
+    }
+    setTotalKm(totalKm + 1);
+  }
+
+  const handleDecreaseKm = () => {
+    if (totalKm <= 10) {
+      return;
+    }
+    setTotalKm(totalKm - 1);
+  } 
+
+  const handleFindPoint = () => {
+    navigator.dispatch(CommonActions.navigate(SCREEN_NAME.silde4));
+  }
+  
   return (
     <Stack
       direction="column"
@@ -36,7 +61,7 @@ export default function FeatureBar(props: Props) {
             style={styles.containerHotspot}
           >
             <Stack direction="row" alignItems="center">
-              <TouchableOpacity>
+              <TouchableOpacity onPress={handleIncreaseKm}>
                 <Image
                   source={ImagesConstants.button.btnArrowUp}
                   style={[styles.buttonDistance, styles.buttonUp]}
@@ -50,11 +75,11 @@ export default function FeatureBar(props: Props) {
               </TouchableOpacity>
             </Stack>
             <Stack direction="row" alignItems="flex-end">
-              <Text style={styles.textBigger}>15</Text>
+              <Text style={styles.textBigger}>{totalKm}</Text>
               <Text style={styles.textUnit}>km</Text>
             </Stack>
             <Stack direction="row" alignItems="center">
-              <TouchableOpacity>
+              <TouchableOpacity onPress={handleDecreaseKm}>
                 <Image
                   source={ImagesConstants.button.btnArrowDown}
                   style={[styles.buttonDistance, styles.buttonDown]}
@@ -81,7 +106,7 @@ export default function FeatureBar(props: Props) {
             </TouchableOpacity>
           </Stack>
           <Typography type="h4" style={styles.textTitle}>
-            THỊ TRẤN THANH BÌNH
+            {props.location.toUpperCase()}
           </Typography>
           <Typography
             type="h4"
@@ -95,7 +120,15 @@ export default function FeatureBar(props: Props) {
             style={styles.marginButtonText}
             justifyContent="space-between"
           >
-            <Typography type="h4" style={styles.buttonTextBigger}>
+            <Typography
+              type="h4"
+              style={[
+                styles.buttonTextBigger,
+                props.isConnected
+                  ? styles.connectedStatus
+                  : styles.disconnectedStatus,
+              ]}
+            >
               Đã kết nối
             </Typography>
             <TouchableOpacity>
@@ -117,7 +150,7 @@ export default function FeatureBar(props: Props) {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handleFindPoint}>
           <Image
             source={ImagesConstants.button.btnFindPoint}
             style={styles.buttonFindPoint}
@@ -167,13 +200,18 @@ const styles = StyleSheet.create({
     marginBottom: hp(0.3),
   },
   buttonTextBigger: {
-    color: "#45FF90",
     fontSize: hp(2),
     fontWeight: "bold",
     textShadowColor: "rgba(0, 0, 0, 0.2)",
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1,
     marginRight: wp(3),
+  },
+  connectedStatus: {
+    color: "#45FF90",
+  },
+  disconnectedStatus: {
+    color: "#FF4545",
   },
   connectedContainer: {
     width: wp(45),
@@ -200,13 +238,15 @@ const styles = StyleSheet.create({
     textShadowRadius: 1,
   },
   buttonHelp: {
-    width: wp(5),
-    height: wp(5),
+    width: wp(4.5),
+    height: wp(4.5),
     position: "absolute",
-    left: wp(7),
-    top: wp(-2),
+    left: wp(8),
+    top: wp(-1.5),
   },
-  containerHotspot: {},
+  containerHotspot: {
+    width: wp(21.5),
+  },
   buttonDistance: {
     width: hp(4),
     height: hp(4),

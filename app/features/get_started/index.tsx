@@ -28,9 +28,6 @@ export default function GetStarted(props: Props) {
       reduceMotion: ReduceMotion.System,
     });
   };
-  const handlePressIntoMainMenu = () => {
-    navigator.dispatch(CommonActions.navigate(SCREEN_NAME.home));
-  };
 
 
   return (
@@ -47,7 +44,7 @@ export default function GetStarted(props: Props) {
         <Slide1 onPress={handlePress} />
         <Slide2 onPress={handlePress} />
         <Slide3 onPress={handlePress} />
-        <Slide4 onPress={handlePressIntoMainMenu} />
+        <Slide4 />
       </Stack>
     </Animated.View>
   );
