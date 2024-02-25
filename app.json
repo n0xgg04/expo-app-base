@@ -42,6 +42,12 @@
     "owner": "n0xgg04",
     "plugins": [
       [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      [
         "expo-font",
         {
           "fonts": [

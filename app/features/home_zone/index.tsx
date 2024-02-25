@@ -8,12 +8,29 @@ import SettingsButton from "./parts/cp_settings_button";
 import InfoBoardInsight from "./parts/cp_info_board_insight";
 import DetailsInfoBoard from "./parts/cp_details_weather";
 import FeatureBar from "./parts/cp_features";
+import * as Location from "expo-location";
+import { useAppDispatch } from "@/global/hooks/redux";
+import { changeUserLocation } from "@/redux/actions";
 
 const handleOnPressSettings = () => {
   console.log("Settings button pressed");
 };
 
 export default function HomeZone() {
+  const dispatch = useAppDispatch();
+  React.useEffect(() => {
+    (async () => {
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== "granted") {
+        console.log("Permission to access location was denied");
+        return;
+      }
+
+      let location = await Location.getCurrentPositionAsync({});
+      dispatch(changeUserLocation(location.coords));
+    })();
+  }, []);
+
   return (
     <ScrollView
       showsHorizontalScrollIndicator={false}
