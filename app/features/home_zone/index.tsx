@@ -1,6 +1,4 @@
 import * as React from "react";
-import { SCREEN_NAME } from "@/global/constants/screens";
-import i18n from "@/localization/i18n";
 import { SafeAreaView } from "react-native-safe-area-context";
 import InfoLocation from "./parts/cp_info";
 import { ImageBackground, ScrollView, StyleSheet, View } from "react-native";
@@ -13,11 +11,15 @@ import FeatureBar from "./parts/cp_features";
 
 const handleOnPressSettings = () => {
   console.log("Settings button pressed");
-}
+};
 
 export default function HomeZone() {
-	return (
-    <ScrollView>
+  return (
+    <ScrollView
+      showsHorizontalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}
+      bounces={false}
+    >
       <ImageBackground
         source={ImagesConstants.backgrounds.home.zone}
         style={styles.imgBackground}
@@ -33,9 +35,12 @@ export default function HomeZone() {
             <SettingsButton onPress={handleOnPressSettings}></SettingsButton>
           </View>
           <InfoBoardInsight />
-
           <DetailsInfoBoard />
-          <FeatureBar isConnected={true} isNotificationOn={false} location={"TT. Thanh Bình"} />
+          <FeatureBar
+            isConnected={true}
+            isNotificationOn={false}
+            location={"TT. Thanh Bình"}
+          />
         </SafeAreaView>
       </ImageBackground>
     </ScrollView>
@@ -46,14 +51,14 @@ const styles = StyleSheet.create({
   imgBackground: {
     width: wp(100),
   },
-container: {
-	  position: "relative",
-  paddingTop: hp(5),
+  container: {
+    position: "relative",
+    paddingTop: hp(5),
     paddingLeft: wp(5),
-	},
-	buttonSettings: {
-		position: "absolute",
-		top: hp(4),
+  },
+  buttonSettings: {
+    position: "absolute",
+    top: hp(5),
     right: wp(6),
-  }
+  },
 });
