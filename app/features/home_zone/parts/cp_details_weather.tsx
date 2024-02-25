@@ -52,17 +52,7 @@ const WeatherItemInfoNextDay = ({
       style={styles.containerWeatherItemInfoNextDay}
     >
       <View
-        style={{
-          marginRight: wp(5),
-          borderRadius: hp(50),
-          borderStyle: "solid",
-          borderColor: "rgba(255, 255, 255, 1)",
-          paddingTop: hp(1),
-          paddingBottom: hp(1),
-          paddingStart: hp(1),
-          paddingEnd: hp(1),
-          borderWidth: hp(0.3),
-        }}
+        style={styles.containnerWeatherItemInfoNextDay_image}
       >
         <Image
           source={icon}
@@ -88,7 +78,7 @@ export default function DetailsInfoBoard() {
       <Stack direction="row" style={styles.containerWeatherDetails}>
         {(() => {
           const test = [];
-          for (let i = 0; i < 7; i++)
+          for (let i = 0; i < 6; i++)
             test.push(
               <WeatherItemInfo
                 timeInfo="Hiện tại"
@@ -145,7 +135,7 @@ const styles = StyleSheet.create({
 
   weatherItemInfo_title: {
     paddingTop: hp(1),
-    fontSize: hp(1.7),
+    fontSize: hp(1.5),
     color: "rgba(255, 255, 255, 1)",
     fontWeight: "bold",
   },
@@ -169,18 +159,19 @@ const styles = StyleSheet.create({
   },
 
   weatherItemInfoNextDay_title: {
-    fontSize: hp(2.5),
+    fontSize: hp(2),
     color: "rgba(255, 255, 255, 0.8)",
     fontWeight: "bold",
   },
   weatherItemInfoNextDay_value: {
-    fontSize: hp(4),
+    fontSize: hp(3),
     color: "rgba(255, 255, 255, 1)",
     fontWeight: "bold",
-    marginRight: wp(10),
+    marginRight: wp(5),
   },
   weatherItemInfoNextDay_image: {
     width: wp(10),
+    height: wp(10),
   },
   containerWeatherItemInfoNextDay: {
     //Have radius only on the left side, background color is transparent, padding hp(4)
@@ -191,6 +182,17 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: hp(20),
     backgroundColor: "rgba(255, 255, 255, 0.2)",
     borderWidth: hp(0.1),
-      borderColor: "rgba(255, 255, 255, 1)",
+    borderColor: "rgba(255, 255, 255, 1)",
+  },
+  containnerWeatherItemInfoNextDay_image: {
+    marginRight: wp(3),
+    borderRadius: hp(50),
+    borderStyle: "solid",
+    borderColor: "rgba(255, 255, 255, 1)",
+    paddingStart: wp(3),
+    paddingEnd: wp(3),
+    paddingTop: wp(3),
+    paddingBottom: wp(3),
+    borderWidth: hp(0.2),
   },
 });

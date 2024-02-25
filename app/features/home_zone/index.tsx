@@ -52,7 +52,7 @@ container: {
 	},
 	buttonSettings: {
 		position: "absolute",
-		top: hp(2),
-    right: hp(2),
+		top: hp(4),
+    right: wp(6),
   }
 });
