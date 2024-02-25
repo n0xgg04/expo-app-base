@@ -9,6 +9,7 @@ import { hp, wp } from "@/global/utils/responsive";
 import SettingsButton from "./parts/cp_settings_button";
 import InfoBoardInsight from "./parts/cp_info_board_insight";
 import DetailsInfoBoard from "./parts/cp_details_weather";
+import FeatureBar from "./parts/cp_features";
 
 const handleOnPressSettings = () => {
   console.log("Settings button pressed");
@@ -34,6 +35,7 @@ export default function HomeZone() {
           <InfoBoardInsight />
 
           <DetailsInfoBoard />
+          <FeatureBar isConnected={false} isNotificationOn={false} location={"TT. Thanh Bình"} />
         </SafeAreaView>
       </ImageBackground>
     </ScrollView>
@@ -43,7 +45,6 @@ export default function HomeZone() {
 const styles = StyleSheet.create({
   imgBackground: {
     width: wp(100),
-    height: hp(150),
   },
 container: {
 	  position: "relative",

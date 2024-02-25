@@ -12,6 +12,7 @@ export const ImagesConstants = {
     uv: require("@/../assets/images/icons/ico-uv.png"),
     humidity: require("@/../assets/images/icons/ico-humidity.png"),
     raincloud: require("@/../assets/images/icons/ico-raincloud.png"),
+    hotspot: require("@/../assets/images/icons/ico-hotspot.png"),
   },
   backgrounds: {
     intro: {
@@ -30,7 +31,14 @@ export const ImagesConstants = {
   button: {
     iconArrowRight: require("@/../assets/images/buttons/btn-arrow-right.png"),
     expandAll: require("@/../assets/images/buttons/btn-expand-all.png"),
-    settings: require("@/../assets/images/buttons/btn-settings.png")
+    settings: require("@/../assets/images/buttons/btn-settings.png"),
+    btnArrowUp: require("@/../assets/images/buttons/btn-arrow-up.png"),
+    btnArrowDown: require("@/../assets/images/buttons/btn-arrow-down.png"),
+    btnHelp: require("@/../assets/images/buttons/btn-help.png"),
+    btnWarning: require("@/../assets/images/buttons/btn-warning.png"),
+    btnNotiOn: require("@/../assets/images/buttons/btn-noti-on.png"),
+    btnNotiOff: require("@/../assets/images/buttons/btn-noti-off.png"),
+    btnFindPoint: require("@/../assets/images/buttons/btn-find-point.png"),
   },
   weatherIcon: {
     // clear: require("@/../assets/images/weather-icons/clear.png"),

@@ -73,6 +73,13 @@ export default function DetailsInfoBoard() {
         Có nắng từ 15:00 - 16:00, với dự báo trời quang vào 19:00, thời tiết trở
         nên mát mẻ hơn sau 20:00.
       </Typography>
+      <Typography type="h3" style={[styles.textGeneral]}>
+        TỔNG QUAN: Hôm nay thời tiết khá đẹp, mát mẻ, phù hợp cho hoạt động
+        ngoài trời.
+      </Typography>
+      <Typography type="h3" style={styles.textGeneral}>
+        CHÚ Ý: Cần mặc quần áo giữ ấm để tránh bị nhiễm lạnh.
+      </Typography>
 
       <Line />
       <Stack direction="row" style={styles.containerWeatherDetails}>
@@ -104,7 +111,6 @@ export default function DetailsInfoBoard() {
             );
           return test;
         })()}
-        
       </Stack>
     </Stack>
   );
