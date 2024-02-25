@@ -79,5 +79,19 @@
         "rain_amount_title": "LƯỢNG MƯA"
       }
     }
+  },
+  "navigation_get_ready": {
+    "title": [
+      "500m",
+      "phía trước",
+      "là tới.",
+      "Tìm Điểm Tập Kết",
+      "Khẩn Cấp"
+    ],
+    "content": "Hỗ trợ bạn di chuyển chính xác đến điểm tập kết gần nhất để nhanh chóng sơ tán trước những nguy cơ thiên tai cực đoan.\n\nXem mô tả để hiểu rõ hơn cách điều hướng.",
+    "buttons": {
+      "description": "Xem mô tả",
+      "done": "Bắt đầu"
+    }
   }
 }

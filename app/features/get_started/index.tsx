@@ -13,6 +13,7 @@ import Slide3 from "./parts/slide3";
 import Slide4 from "./parts/slide4";
 import { SCREEN_NAME } from "@/global/constants/screens";
 import { CommonActions, useNavigation } from "@react-navigation/native";
+import { PermissionsAndroid } from "react-native";
 type Props = {};
 
 
@@ -28,7 +29,6 @@ export default function GetStarted(props: Props) {
       reduceMotion: ReduceMotion.System,
     });
   };
-
 
   return (
     <Animated.View
