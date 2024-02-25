@@ -124,13 +124,11 @@ const styles = StyleSheet.create({
         paddingBottom: hp(5),
     },
     title: {
-        paddingHorizontal: wp(6),
-        fontSize: hp(6.8),
+        fontSize: hp(4),
         color: "white",
     },
     subtitle: {
-        paddingHorizontal: wp(10),
-        fontSize: hp(4.5),
+        fontSize: hp(3),
         color: "white",
         marginBottom: hp(3),
     },
